@@ -1,5 +1,7 @@
-﻿namespace BookLib
+﻿using BookLib.Data;
+namespace BookLib
 {
+
     public partial class MainPage : ContentPage
     {
         int count = 0;
@@ -7,6 +9,8 @@
         public MainPage()
         {
             InitializeComponent();
+            App.Conn.Init();
+            
         }
 
         private void OnCounterClicked(object sender, EventArgs e)

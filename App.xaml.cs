@@ -1,12 +1,16 @@
-﻿namespace BookLib
+﻿using BookLib.Data;
+
+namespace BookLib
 {
     public partial class App : Application
     {
-        public App()
+        public static Conn Conn { get; private set; }
+        public App(Conn _conn)
         {
             InitializeComponent();
 
             MainPage = new AppShell();
+            Conn = _conn;
         }
     }
 }
